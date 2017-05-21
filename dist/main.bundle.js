@@ -325,7 +325,7 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0
 /***/ 220:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "mine.108dbed7810e4c10c24e.png";
+module.exports = __webpack_require__.p + "Minesweeper/dist/mine.108dbed7810e4c10c24e.png";
 
 /***/ }),
 
