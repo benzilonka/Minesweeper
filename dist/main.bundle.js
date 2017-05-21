@@ -62,7 +62,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 var appRoutes = [
-    { path: '', component: __WEBPACK_IMPORTED_MODULE_9__components_game_game_component__["a" /* GameComponent */] }
+    { path: 'Minesweeper/dist', component: __WEBPACK_IMPORTED_MODULE_9__components_game_game_component__["a" /* GameComponent */] }
 ];
 var AppModule = (function () {
     function AppModule() {
