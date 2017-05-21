@@ -1,0 +1,9 @@
+<a [ngClass]="{'mine': true, 'mine-red': revealed && mine, 'mine-default': revealed, 'mine-flag': flagged, 
+				'mine-white': revealed && !mine && threat == 0, 
+				'mine-cyan': revealed && !mine && threat == 1, 
+				'mine-pink': revealed && !mine && threat == 2, 
+				'mine-yellow': revealed && !mine && threat == 3, 
+				'mine-orange': revealed && !mine && threat >= 4}"
+				[style.width]="size" [style.height]="size">
+	<div><p *ngIf="(revealed && !flagged && threat > 0 && !mine)">{{threat}}</p></div>
+</a>

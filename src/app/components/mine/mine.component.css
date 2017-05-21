@@ -1,0 +1,57 @@
+.mine {  
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  max-height: 50px;
+  max-width: 50px;
+  text-align: center;
+  vertical-align: middle;
+  border: none;
+  margin-bottom: 4px;
+  transition: all 0.2s ease 0s;
+  background-color: #0853bf;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 2px 0px;
+}
+.mine div {
+	display: inline-grid;
+	height: 100%;
+}
+.mine div p {
+	font-weight: bold;
+	margin: auto;
+}
+.mine-flag {
+	background-color: #fff;
+	background-image: url(../../../assets/flag.png);
+	background-size: 50%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.mine-red {
+  background-image: url(../../../assets/mine.png);
+	background-size: 50%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.mine-default {
+  color: #575eab;
+  background-color: #fff;
+}
+.mine-brown {
+  color: #795548;
+}
+.mine-white {
+  color: #fff;
+}
+.mine-cyan {
+  color: #278992;
+}
+.mine-pink {
+  color: #ff14e1;
+}
+.mine-yellow {
+  color: #91a200;
+}
+.mine-orange {
+  color: #ff9914;
+}

@@ -1,0 +1,30 @@
+<div class="game-wrapper"> 
+	<h1>Minesweeper</h1>
+	<div *ngIf="game.lost" class="game-over-wrapper animated tada">
+		<h1 class="you-lose">You Loss!</h1>
+		<button (click)="startGame()">Restart</button>
+	</div>
+	<div *ngIf="game.won" class="game-over-wrapper animated tada">
+		<h1 class="you-win">You Win!</h1>
+		<button (click)="startGame()">Restart</button>
+	</div>
+	
+	<form *ngIf="!game.lost && !game.won">
+		<label>Columns:</label><input placeholder="Cols" min="1" [(ngModel)]="columns" name="columns" type="number">
+		<label>Rows:</label><input placeholder="Rows" min="1" [(ngModel)]="rows" name="rows" type="number">
+		<label>Mines:</label><input placeholder="Mines" min="1" [(ngModel)]="mines" name="mines" type="number">
+		&nbsp;&nbsp;
+		<button (click)="startGame()" class="animated">Restart</button>
+		<br>
+		<p [ngClass]="{'flag-alert': isFlagAlert()}">Remaining flags: {{game.minesCount - game.flagsCount}}</p>
+	</form>
+	
+	<ng-container *ngFor="let row of game.board">
+        <ng-container *ngFor="let mine of row">
+            <mine [mine]="mine.mine" [size]="mine.size" [revealed]="mine.revealed || superman || game.won || game.lost" [threat]="mine.threat" [flagged]="mine.flagged" (click)="mineClicked($event, mine.i, mine.j)"></mine>
+        </ng-container>
+		<br>
+    </ng-container>
+	
+	<button (click)="setSuperman()" [ngClass]="{'superman': true, 'superman-active': superman}">Superman Mode {{superman ? 'ON' : 'OFF'}}</button>
+</div>
